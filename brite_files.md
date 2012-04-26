@@ -83,6 +83,7 @@ curl https://filesapi.briteverify.com/brite_files/my-file-job-id.json?apikey=my-
   "email_column" : 0,
   "delimiter" : ","
 }
+```
 
 Once the status is "complete" a "verified_file_uri" will be avaialable and you can download the file from that location.
 

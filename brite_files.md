@@ -4,7 +4,7 @@ The files API is a simple REST API that allows for the transfer of appropriately
 
 Things to Keep In Mind
 ----------------------
-* All files msut be UTF-8 Encoded
+* All files must be UTF-8 Encoded
 * All files must have a header row with at least one column named "email"
 * It is recommended that files should no exceed 500,000 records for performance reasons
 * Files over 500,000 should be broken into chunks before being pushed to BriteFiles

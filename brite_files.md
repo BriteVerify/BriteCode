@@ -9,7 +9,7 @@ Things to Keep In Mind
 * You must request File API Access to be enabled on your account
 * All files must be UTF-8 Encoded
 * All files must have a header row with at least one column named "email"
-* It is recommended that files should no exceed 500,000 records for performance reasons
+* It is recommended that files should not exceed 500,000 records for performance reasons
 * Files over 500,000 should be broken into chunks before being pushed to BriteFiles
 
 POSTing a file
@@ -25,7 +25,7 @@ A file can be pushed into the BriteFiles platform with a simple HTTP Post.
 ###Example POST
 
 ```Text
-curl POST -F apikey=my-api-key -F file_job[contact_file]=@test.csv -F file_job[delimiter]=, -F file_job[verify_connected]=true -F press=OK https://filesapi.briteverify.com/brite_files.json
+curl -F apikey=apikey=my-api-key -F file_job[contact_file]=@test_emails.csv -F file_job[delimiter]=, -F file_job[verify_connected]=true -F press=OK https://files.briteverify.com/brite_files.json
 ```
 ###Response Body
 ```Text

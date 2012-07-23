@@ -32,7 +32,7 @@ curl -F apikey=apikey=my-api-key -F file_job[contact_file]=@test_emails.csv -F f
 {
   "id" : "a-file-job-id",
   "name" : "test.csv",
-  "status" : "error", // "pending", "loading", "error", "processing", "exporting", "complete", "cancelled"
+  "status" : "import_error", // "pending", "loading", "import_error", "processing", "exporting", "complete", "cancelled"
   "file_job_uri" : "https://filesapi.briteverify.com/a-file-job-id.json"
   "contact_file_uri" : "https://filesapi.briteverify.com/a-file-job-id/contact_file&apikey=my-api-key",
   "verified_file_uri" : "https://filesapi.briteverify.com/a-file-job-id/verified_file&apikey=my-api-key",
@@ -41,7 +41,7 @@ curl -F apikey=apikey=my-api-key -F file_job[contact_file]=@test_emails.csv -F f
   "percent_complete" : 39.00,
   "email_column" : 0,
   "delimiter" : ",",
-  "errors" : ["contact_file", "line 483 contains illegal character"]
+  "import_error" : ["contact_file", "does is not a valid format"]
 }
 ```
 File Life-cycle
@@ -58,7 +58,25 @@ Once a file has been successfully posted it will move through several states.
 Once a file is "complete" it is ready for download. 
 
 ###Unhappy Path
-If a file has issues it will move into an "error" state and notifications will be sent out. 
+If a file has issues it will move into an "error" state and notifications will be sent out. If the error occurs while the file is being loaded the status of the file will be set to "import_error" and an "import_error" message will be shown.
+
+```Text
+{
+  "id" : "a-file-job-id",
+  "name" : "test.csv",
+  "status" : "import_error",
+  "file_job_uri" : "https://filesapi.briteverify.com/a-file-job-id.json"
+  "contact_file_uri" : "https://filesapi.briteverify.com/a-file-job-id/contact_file&apikey=my-api-key",
+  "verified_file_uri" : "https://filesapi.briteverify.com/a-file-job-id/verified_file&apikey=my-api-key",
+  "columns" : ["email", "custom_id", "fname", "lname"],
+  "stats" : {"rows" : 1000, "processed" : 400, "valid" : 199, "invalid" : 201, "connected" : 78},
+  "percent_complete" : 39.00,
+  "email_column" : 0,
+  "delimiter" : ",",
+  "import_error" : "contact_file", "line 483 contains illegal character"
+}
+```
+
 
 Monitoring File State & Downloading
 -----------------------------------

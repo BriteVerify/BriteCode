@@ -114,7 +114,7 @@ A temporary or "disposable" email address is one that a user has set up to live 
 Role Addresses
 --------------
 
-Role address are email address that are set aside for functions, not people. They’re often forwarded to a group or department inside a company, and they can change owners frequently.  Sending to a role address can quickly lead to spam complaints. Also, Email Service Providers (ESPs) often convert dormant role account to spam trap addresses, which will also get you into a ton of trouble. Either way, it’s a darn good idea to toss these aside. However, technically speaking, they can be "deliverable" addresses. So BriteVerify does not mark them as invalid. Instead we have a role_address flag to let you know to sending to the address is not advisable, but ultimately up to you. 
+Role address are email address that are set aside for functions, not people. They’re often forwarded to a group or department inside a company, and they can change owners frequently.  Sending to a role address can quickly lead to spam complaints. Also, unused role accounts are often converted to spam traps, which will also get you into a ton of trouble. Either way, it’s a darn good idea to toss these aside. However, technically speaking, they can be "deliverable" addresses. So BriteVerify does not mark them as invalid. Instead we have a role_address flag to let you know to sending to the address is not advisable, but ultimately up to you. 
 
 Some examples of role addresses are postmaster, sales, admin, info, webmaster, etc. One role address in particular that is extremely risky is the postmaster address. Sending an email to that one is like driving drunk to a police station... not that brite ;-)
 

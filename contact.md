@@ -1,9 +1,9 @@
 Contact API
 ===========
 
-The contact API let's you verify an entire business card of contact information in one simple request. So instead of having to make 4 different requests to verify a contact's info (name, email, phone, and postal address) you just make one call, easy peasy lemon squeezy. Heck, we even throw an IP address verification in there for good measure.
+The contact API lets you verify an entire business card of contact information in one simple request. So instead of having to make 4 different requests to verify a contact's info (name, email, phone, and postal address) you just make one call, easy peasy lemon squeezy. Heck, we even throw an IP address verification in there for good measure.
 
-So using the Contact API is just like using the other BriteVerify APIs except instead of passing a single data element to be verified, you are passing all the contact info associated with a person. The only big difference technically is how you format the parameters of the GET request. When using the Contact API you wrap each parameter in a contact, e.g., "contact[email]=james@righteousdude.com".
+So using the Contact API is just like using the other BriteVerify APIs except instead of passing a single data element to be verified, you are passing all the contact info associated with a person. The only big difference technically is how you format the parameters of the GET request. When using the Contact API you wrap each parameter in a contact, e.g., ```contact[email]=james@righteousdude.com```.
 
 Here is an example of a GET request that will just verify a contact's email and phone:
 
@@ -14,6 +14,17 @@ https://bpi.briteverify.com/contacts.json?contact[email]=james@example.com&conta
 This bracketed technique is a very common for passing objects as parameters instead of single values. Anyone familiar with Ruby on Rails or with how jQuery serializes JSON objects will recognize this pattern.
 
 Now let's get into some examples.
+
+Connected
+---------
+
+As in [Email Verification](https://github.com/BriteVerify/BriteCode/blob/master/email.md#connected), you can request the 'Connected' status of an address by passing ```verify_connected=true```
+
+```
+https://bpi.briteverify.com/contacts.json?contact[email]=james@example.com&contact[phone]=555-555-5555&apikey=your-api-key&verify_connected=true
+```
+
+This will return results similar to the above, with the addition of the "connected" status for the email address.
 
 Full Contact Verification
 -------------------------
@@ -39,7 +50,6 @@ https://bpi.briteverify.com/contacts.json?contact[name]=James+McLachlan&contact[
     "account":"james",
     "domain":"example.com",
     "status":"valid",
-    "connected":true
   },
   "phone":{
     "number":"7045251234",

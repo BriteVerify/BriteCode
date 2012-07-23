@@ -20,6 +20,7 @@ BriteServices
 * [IP Address](https://github.com/BriteVerify/BriteCode/blob/master/ip.md)
 * [Contact](https://github.com/BriteVerify/BriteCode/blob/master/contact.md)
 * [BriteFiles](https://github.com/BriteVerify/BriteCode/blob/master/brite_files.md)
+* [JavaScript API](https://github.com/BriteVerify/BriteCode/blob/master/javascript.md)
 
 
 Old API

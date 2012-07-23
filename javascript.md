@@ -21,7 +21,7 @@ If the value cannot be verified, the response object will contain an array of er
 
 ```JavaScript
 
-jQuery.briteVerify.email(“myemail@somedomain.com”, function(email){
+jQuery.briteVerify.email("myemail@somedomain.com", function(email){
   // first check to see if there are any errors
   if(email.errors){
   	// get the first error in the array
@@ -29,12 +29,12 @@ jQuery.briteVerify.email(“myemail@somedomain.com”, function(email){
   	var attr = error[0];
   	var msg = error[1];
   	// so a different error message base on the attr
-  	if(attr == “address”){
-  		alert(“incorrect email syntax”);
-  	}else if(attr == “account”){
-  		alert(“the account was not found on the domain”);
-  	}else if(attr == “domain”){
-  		alert(“the is not valid”);
+  	if(attr == "address"){
+  		alert("incorrect email syntax");
+  	}else if(attr == "account"){
+  		alert("the account was not found on the domain");
+  	}else if(attr == "domain"){
+  		alert("the is not valid");
   	}
   }
 } 
@@ -45,16 +45,16 @@ jQuery.briteVerify.email(“myemail@somedomain.com”, function(email){
 In addition to the basic errors array, there is also an errors_json object that is essential a utility object for the errors array. It makes coding a little easier and cleaner.
 
 ```JavaScript
-jQuery.briteVerify.email(“myemail@somedomain.com”, function(email){
+jQuery.briteVerify.email("myemail@somedomain.com", function(email){
 	// first check to see if there are any errors
 	if(email.errors_json){
 		// so a different error message base on the attr
 		if(email.errors_json.address){
-			alert(“incorrect email syntax”);
+			alert("incorrect email syntax");
 		}else if(email.errors_json.account){
-			alert(“the account was not found on the domain”);
+			alert("the account was not found on the domain");
 		}else if(email.errors_json.domain){
-			alert(“the is not valid”);
+			alert("the is not valid");
 		}
   }
 } 
@@ -62,15 +62,15 @@ jQuery.briteVerify.email(“myemail@somedomain.com”, function(email){
 
 ###User Account Errors
 
-Should your account surpass its daily test transaction limit for unauthorized domains, or if your account balance reaches 0, an error will be returned on the “user” attribute. It is a best practice to ignore these messages, but they can be helpful for testing purposes. A notification will be sent out prior to any user account hitting a zero balance, or if auto-billing is enabled a billing notification will be sent.
+Should your account surpass its daily test transaction limit for unauthorized domains, or if your account balance reaches 0, an error will be returned on the "user" attribute. It is a best practice to ignore these messages, but they can be helpful for testing purposes. A notification will be sent out prior to any user account hitting a zero balance, or if auto-billing is enabled a billing notification will be sent.
 
 ```JavaScript
-jQuery.briteVerify.email(“myemail@somedomain.com”, function(email){
+jQuery.briteVerify.email("myemail@somedomain.com", function(email){
 	// first check to see if there are any errors
 	if(email.errors_json){
 		// so a different error message base on the attr
 		if(email.errors_json.user){
-			alert(“user account: ” + email.errors_json.user); //”overbalance”
+			alert("user account: " + email.errors_json.user); //"overbalance"
 		}
   }
 }

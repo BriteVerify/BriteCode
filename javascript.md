@@ -3,6 +3,7 @@ BriteVerify JavaScript API
 
 NOTE: This API is deprecated and will be replaced in the near future. The documentation below is intended for users who have already implemented the JS API.
 
+
 The BriteVerify JavaScript API sits atop jQuery and the functions follow a similar pattern to traditional jQuery AJAX calls in that an optional callback function may be passed to that will execute when the call completes. All BriteVerify functions are contained within the briteVerify namespace to avoid potential naming conflicts. All the functions follow a similar pattern for their method signature: value, callback. The first parameter is the value to be verified, either a simple string for functions such as email, or a JSON object, as with address. The second parameter it the callback function to be executed when the verification is complete. This function will always have the resulting object passed into it. This is illustrated in the following code example:
 
 ```JavaScript
@@ -11,6 +12,29 @@ jQuery.briteVerify.email("myemail@somedomain.com", function(email){
 	alert(email.address); // myemail@somedomain.com
 } 
 ```
+
+To get started just include the BriteVerify JavaScript library.
+
+```HTML
+<script type="text/javascript" src="https://api.briteverify.com/users/your-username/api.js?version=01"></script>
+```
+
+You can find your include URL by logging into BriteVerify and clicking on the "Account" link.
+
+![alt text](https://github.com/BriteVerify/BriteCode/raw/master/images/bv_account_js.jpg)
+
+Adding Trusted Domains
+----------------------
+
+The JavaScript API uses domain based authentication to ensure that your scripts only run on authorized websites. In order for the JavaScript API to work in production mode you have to login to BriteVerify and add your trusted domains.
+
+1. Click on the "Account" Link
+2. Click on the "Edit" Link
+3. Scroll to the "Trusted Domains" section
+4. Type in a trusted domain, i.e., www.mywebsite.com
+5. Click Add
+6. Repeat for as many domains as needed
+
 
 Handling Errors
 ---------------

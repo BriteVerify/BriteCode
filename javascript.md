@@ -10,6 +10,8 @@ The BriteVerify JavaScript API sits atop jQuery and the functions follow a simil
 
 jQuery.briteVerify.email("myemail@somedomain.com", function(email){
 	alert(email.address); // myemail@somedomain.com
+	alert(email.status); // valid
+	alert(email.errors); // null
 } 
 ```
 

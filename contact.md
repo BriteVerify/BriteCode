@@ -82,6 +82,7 @@ https://bpi.briteverify.com/contacts.json?contact[name]=James+McLachlan&contact[
   },
   "address":{
     "street":"325 Example Pl",
+    "unit":"Suite 123"
     "city":"Charlotte",
     "state":"North Carolina",
     "state_code":"NC",

@@ -25,7 +25,7 @@ A file can be pushed into the BriteFiles platform with a simple HTTP Post.
 ###Example POST
 
 ```Text
-curl -F apikey=apikey=my-api-key -F file_job[contact_file]=@test_emails.csv -F file_job[delimiter]=, -F file_job[verify_connected]=true -F press=OK https://files.briteverify.com/brite_files.json
+curl -F apikey=my-api-key -F file_job[contact_file]=@test_emails.csv -F file_job[delimiter]=, -F file_job[verify_connected]=true -F press=OK https://files.briteverify.com/brite_files.json
 ```
 ###Response Body
 ```Text

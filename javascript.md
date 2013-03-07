@@ -1,9 +1,6 @@
 BriteVerify JavaScript API
 ==========================
 
-NOTE: This API is deprecated and will be replaced in the near future. The documentation below is intended for users who have already implemented the JS API.
-
-
 The BriteVerify JavaScript API sits atop jQuery and the functions follow a similar pattern to traditional jQuery AJAX calls in that an optional callback function may be passed to that will execute when the call completes. All BriteVerify functions are contained within the briteVerify namespace to avoid potential naming conflicts. All the functions follow a similar pattern for their method signature: value, callback. The first parameter is the value to be verified, either a simple string for functions such as email, or a JSON object, as with address. The second parameter it the callback function to be executed when the verification is complete. This function will always have the resulting object passed into it. This is illustrated in the following code example:
 
 ```JavaScript

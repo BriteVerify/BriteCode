@@ -19,7 +19,9 @@ Unless something goes wrong, the HTTP status code will always be 200, regardless
   "account":"james",
   "domain":"briteverify.com",
   "status":"valid",
-  "connected":"true",
+  "connected":true,
+  "disposable":false,
+  "role_address":false,
   "duration":0.104516605
 }
 ```
@@ -38,6 +40,8 @@ https://bpi.briteverify.com/emails.json?address=james@yahoo.com&apikey=your-api-
   "status":"invalid",
   "error_code":"email_account_invalid",
   "error":"Email account invalid",
+  "disposable":false,
+  "role_address":false,
   "duration":0.141539548
 }
 ```
@@ -92,6 +96,8 @@ https://bpi.briteverify.com/emails.json?address=james@briteverify.com&verify_con
   "domain":"briteverify.com",
   "status":"valid",
   "connected":true,
+  "disposable":false,
+  "role_address":false,
   "duration":0.236341246
 }
 ```

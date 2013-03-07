@@ -144,6 +144,18 @@ So what we care about are the first two objects, errors and error_codes.
 
 Errors is basically a humanized version of the error_codes, which represent what actually is invalid about the given data element. Refer to the individual APIs' documentation for more information about which error codes can be returned for a given element.
 
+Error Fields
+------------
+Here is a list of fields within contact on which an error might occur.
+
+* email
+* phone
+* address
+* ip
+* name
+* user (authorization error)
+* contact (if there is an error with the contact reqeust)
+
 There we go. That is the Contact API. We will be adding more documentation, examples, and How-To's soon. In the meantime, have fun.
 
  

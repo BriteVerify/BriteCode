@@ -77,6 +77,14 @@ If a file has issues it will move into an "error" state and notifications will b
 }
 ```
 
+##Status Codes
+* pending
+* loading
+* import_error
+* processing
+* reprocessing
+* complete
+
 
 Monitoring File State & Downloading
 -----------------------------------

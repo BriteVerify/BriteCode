@@ -41,7 +41,7 @@ curl -F apikey=my-api-key -F file_job[contact_file]=@test_emails.csv -F file_job
   "percent_complete" : 39.00,
   "email_column" : 0,
   "delimiter" : ",",
-  "import_error" : ["contact_file", "does is not a valid format"]
+  "import_error" : "Line 1: No headers of any interest (was looking for any of: email, street, city, state, zip, first_name, last_name, full_name, phone, ip)""
 }
 ```
 File Life-cycle
@@ -73,7 +73,7 @@ If a file has issues it will move into an "error" state and notifications will b
   "percent_complete" : 39.00,
   "email_column" : 0,
   "delimiter" : ",",
-  "import_error" : "contact_file", "line 483 contains illegal character"
+  "import_error" : "Line 1: No headers of any interest (was looking for any of: email, street, city, state, zip, first_name, last_name, full_name, phone, ip)""
 }
 ```
 

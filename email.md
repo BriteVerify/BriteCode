@@ -80,27 +80,6 @@ The error is really just a humanized version of the error code. So that an error
 * email_domain_invalid: the domain does not exist or is not capable of receiving email
 * email_account_invalid: the email account does not exist on the domain
 
-Connected
----------
-
-If you pass an additional parameter of "verify_connected=true", and the email is valid, we will then scan the online networks, wishlists, public directories, social networks, photo sharing sites (basically the internet itself) to see if the email is "connected" to other active accounts. This indicates that the email is much more likely to be actively used and connected to a real person. The connected attribute will be present if the email is valid and the verify_connected parameter is passed as true. 
-
-```text
-https://bpi.briteverify.com/emails.json?address=james@briteverify.com&verify_connected=true&apikey=your-api-key
-```
-
-```Javascript
-{
-  "address":"james@briteverify.com",
-  "account":"james",
-  "domain":"briteverify.com",
-  "status":"valid",
-  "connected":true,
-  "disposable":false,
-  "role_address":false,
-  "duration":0.236341246
-}
-```
 
 Disposable
 ----------

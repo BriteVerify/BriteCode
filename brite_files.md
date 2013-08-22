@@ -6,6 +6,8 @@ NOTE: You must request File API authorization of your account otherwise the api 
 
 Things to Keep In Mind
 ----------------------
+* This system is designed for files with a row size of 50,000+. It is not intended for small files and performance will be significanly impacted if many small files are sent instead of one big file.
+* Batch emails into files of 50,000 or greater in size.
 * You must request File API Access to be enabled on your account
 * All files must be UTF-8 Encoded
 * All files must have a header row with at least one column named "email"

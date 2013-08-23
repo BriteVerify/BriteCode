@@ -173,14 +173,14 @@ me@bellsouth.net,098922889
 
 ###Example Verified File UTF-8 Encoded
 ```Text
-email,customid,email_status,connected
-jdoe@yahoo.com,123123, email_account_invalid, null
-james@yahoo.com, 123221312, valid, true
-jm@yahoo.com, 123221312, valid, false
-me@yaho1232o.com,89809089, email_domain_invalid, null
-me$bellsouth.net,8980234239089, email_address_invalid, null
-me@bellsouth.net,0989889, unknown, true
-me@somewhere.net,098229889, accept_all, true
+email,customid, email_status, disposable, role_account
+jdoe@yahoo.com, 123123,email_account_invalid, FALSE, FALSE
+james@yahoo.com, 123221312, valid, FALSE, FALSE
+admin@briteverify.com, 123221312, valid, FALSE, TRUE
+me@yaho1232o.com,89809089, email_domain_invalid, FALSE, FALSE
+me$bellsouth.net,8980234239089, email_address_invalid, FALSE, FALSE
+me@bellsouth.net,0989889, unknown, FALSE, FALSE
+me@somewhere.net,098229889, accept_all, FALSE, FALSE
 ```
 
 Email Statuses
@@ -192,6 +192,21 @@ Email Statuses
 * email_account_invalid : inbox does not exist at domain
 * connected : email is valid and connected to one or more active online networks
 * accept_all: The email domain responds valid to all emails
+
+Disposable
+----------
+
+A temporary or "disposable" email address is one that a user has set up to live for only a short period of time for a variety of reasons. Usually you don't want to accept these types of emails, but we leave that up to how you wish to implement your own applications. These emails are just like any other emails and the "status" will reflect that. However, the disposable flag will be present if the email is from a known temporary email provider.
+
+Role Addresses
+--------------
+
+Role address are email address that are set aside for functions, not people. They’re often forwarded to a group or department inside a company, and they can change owners frequently.  Sending to a role address can quickly lead to spam complaints. Also, unused role accounts are often converted to spam traps, which will also get you into a ton of trouble. Either way, it’s a darn good idea to toss these aside. However, technically speaking, they can be "deliverable" addresses. So BriteVerify does not mark them as invalid. Instead we have a role_address flag to let you know to sending to the address is not advisable, but ultimately up to you. 
+
+Some examples of role addresses are postmaster, sales, admin, info, webmaster, etc. One role address in particular that is extremely risky is the postmaster address. Sending an email to that one is like driving drunk to a police station... not that brite ;-)
+
+
+
 
 
 

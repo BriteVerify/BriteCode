@@ -1,5 +1,8 @@
 Files API
 =========
+
+*PLEASE NOTE: THIS API IS DEPRECATED AND WILL BE SUNSET IN THE NEAR FUTURE.*
+
 The files API is a simple REST API that allows for the transfer of appropriately formatted CSV and text files of email address into the BriteVerify File Processing Platform.
 
 NOTE: You must request File API authorization of your account otherwise the api calls will return with a "user not authorized" 401 error.

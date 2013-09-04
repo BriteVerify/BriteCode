@@ -193,7 +193,6 @@ Email Statuses
 * email_address_invalid : email syntax invalid
 * email_domain_invalid : domain does not exists or is not email capable
 * email_account_invalid : inbox does not exist at domain
-* connected : email is valid and connected to one or more active online networks
 * accept_all: The email domain responds valid to all emails
 
 Disposable

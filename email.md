@@ -55,7 +55,7 @@ Response Attributes
 * status: the status of the given email address
 * error: the error message if the email is invalid
 * error_code: a code representation of error
-* connected: this attribute id deprecated, please ignore it; it may be removed in the future
+* connected: this attribute is deprecated, please ignore it; it may be removed in the future
 * disposable: is the email a temporary or "disposable" email address
 * duration: the time it took to process your request
 

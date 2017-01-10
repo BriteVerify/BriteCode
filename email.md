@@ -19,7 +19,7 @@ Unless something goes wrong, the HTTP status code will always be 200, regardless
   "account":"james",
   "domain":"briteverify.com",
   "status":"valid",
-  "connected":true,
+  "connected":null,
   "disposable":false,
   "role_address":false,
   "duration":0.104516605
@@ -55,7 +55,7 @@ Response Attributes
 * status: the status of the given email address
 * error: the error message if the email is invalid
 * error_code: a code representation of error
-* connected: whether or not a valid email is connected to active online networks
+* connected: this attribute id deprecated, please ignore it; it may be removed in the future
 * disposable: is the email a temporary or "disposable" email address
 * duration: the time it took to process your request
 

@@ -15,17 +15,6 @@ This bracketed technique is a very common for passing objects as parameters inst
 
 Now let's get into some examples.
 
-Connected
----------
-
-As in [Email Verification](https://github.com/BriteVerify/BriteCode/blob/master/email.md#connected), you can request the 'Connected' status of an address by passing ```verify_connected=true```
-
-```
-https://bpi.briteverify.com/contacts.json?contact[email]=james@example.com&contact[phone]=555-555-5555&apikey=your-api-key&verify_connected=true
-```
-
-This will return results similar to the above, with the addition of the "connected" status for the email address.
-
 Full Contact Verification
 -------------------------
 
